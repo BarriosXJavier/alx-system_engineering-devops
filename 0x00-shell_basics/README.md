@@ -4,3 +4,4 @@
 long format script to list files and details
 the 4-listmorefiles script shows all files in long format
 the 5-listfilesdigitsonly displays hidden, user and group IDs in long format
+6-firstdirectory creates 6-firstdirectory in /tmp
