@@ -6,3 +6,4 @@ added 3-new_owner for ownership change
 5-execute script adds execute permission to hello owner
 6-multiple_permissions adds execute permission to owner amd group owner and read permission to other userd
 7-everybody adds permissions to everyone
+The 9-James_Bond script is for users only permissions
