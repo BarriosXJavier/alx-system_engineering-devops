@@ -3,3 +3,4 @@ betty script switches to user betty
 added 2-groups script that prints all groups the user is in
 added 3-new_owner for ownership change
 4-empty creates a new empty hello file
+5-execute script adds execute permission to hello owner
