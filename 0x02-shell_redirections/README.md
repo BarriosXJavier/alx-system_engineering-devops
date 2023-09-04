@@ -5,3 +5,4 @@
 4-lastlines takes last 10 lines
 5-firstlines gets the first 10 lines
 6-third_line prints the 3rd linen
+7-file prints some text with a newline
