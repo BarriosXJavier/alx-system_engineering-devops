@@ -1,1 +1,1 @@
-0-alias for a deletion
+0-alias deletion script
