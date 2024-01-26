@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#A story based on the /etc/passwd file
+
+passwd_file="/etc/passwd"
+
+# Check if the file exists
+if [ -e "$passwd_file" ]; then
+    # Read the file line by line using a while loop with IFS
+    while IFS=: read -r username x uid gid gecos home shell; do
+        # Extract additional information (password and user info) from /etc/passwd file
+        passcode=$(awk -v var="$username" -F: '$1 == var {print $2}' /etc/shadow)
+        user_info=$(finger "$username" | sed -n '2p')
+
+        # Display information about each user
+        echo "The user $username is part of the $gid gang,"
+        echo "lives in $home and rides $shell."
+        echo "USER ID's place is protected by the passcode $passcode,"
+        echo "more info about the user here: $user_info"
+        echo
+    done < "$passwd_file"
+else
+    echo "Error: /etc/passwd file not found."
+fi

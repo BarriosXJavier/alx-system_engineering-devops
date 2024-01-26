@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script print the IP address of the visitors
+apache_log="./apache-access.log"
+
+# Check if the log file exists
+if [ -e "$apache_log" ]; then
+    # Using awk to extract and format IP and HTTP status code
+    awk '{print $1, $9}' "$apache_log"
+else
+    echo "Error: Apache log file not found."
+fi
