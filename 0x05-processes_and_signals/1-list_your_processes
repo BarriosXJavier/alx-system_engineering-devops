@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Display a list of currently running processes with hierarchy
+ps -e --forest -o user,pid,ppid,%cpu,%mem,vsz,rss,tty,stat,start,time,command
