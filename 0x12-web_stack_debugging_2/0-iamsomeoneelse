@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Set a shell for a desired user
+# and run the "whoami" command
+#
+
+user="$1"
+
+if [ "$user" ] ; then
+    chsh -s "$(which bash)" "$user" && su "$user" -c "whoami"
+fi
