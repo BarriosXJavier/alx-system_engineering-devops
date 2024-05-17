@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Gracefully reloads Gunicorn
+
+grep gunicorn | xargs kill -HUP
